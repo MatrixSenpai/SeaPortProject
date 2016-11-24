@@ -43,7 +43,7 @@ public class Dock extends BaseObject {
     }
 
     public void startJobs() {
-        
+        dockedShip.shipShouldBeginWorking();
     }
 
     public void setDockedShip(Integer i, Ship s) {

@@ -42,12 +42,24 @@ public class Job extends BaseObject implements Runnable {
 
     @Override
     public void run() {
+        System.out.println(String.format("Beginning %s. Will take %.2f seconds", name, duration));
         done = false;
         long time = System.currentTimeMillis();
         long startTime = time;
         long stopTime = time + (long) (1000 * duration);
         double duration = stopTime - time;
 
+        while(time < stopTime) {
+            double remaining = (long) ((stopTime - time) / 1000);
+            try {
+                Thread.sleep(1000);
+                System.out.println(String.format("%s is running. Remaining time %.0f", name, remaining));
+                time += 1000;
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println(String.format("Job %s has finished", name));
     }
 
     public boolean isDone() {

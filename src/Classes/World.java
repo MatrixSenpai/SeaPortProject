@@ -66,6 +66,8 @@ public class World extends BaseObject {
         }catch (IOException e) {
             e.printStackTrace();
         }
+
+        startJobs();
     }
 
     public JTree getTree() {

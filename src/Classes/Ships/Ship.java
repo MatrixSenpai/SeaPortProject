@@ -6,6 +6,8 @@ import Classes.Job;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Ship extends BaseObject {
     private double weight;
@@ -39,6 +41,20 @@ public class Ship extends BaseObject {
         rtr += String.format("Draft:  %.2f\n", draft);
 
         return rtr;
+    }
+
+    public void shipShouldBeginWorking() {
+        synchronized(this) {
+            for (Map.Entry<Integer, Job> jobEntry : jobs.entrySet()) {
+                try {
+                    Thread t = new Thread(jobEntry.getValue());
+                    t.start();
+                    t.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     @Override
