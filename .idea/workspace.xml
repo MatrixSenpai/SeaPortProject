@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Dock.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Dock.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/Ship.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/Ship.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/World.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/World.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Dock.java" afterPath="$PROJECT_DIR$/src/Classes/Dock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Job.java" afterPath="$PROJECT_DIR$/src/Classes/Job.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" afterPath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/World.java" afterPath="$PROJECT_DIR$/src/Classes/World.java" />
     </list>
     <ignored path="SeaPorts_Phillips.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -628,6 +628,14 @@
       <option name="presentableId" value="Default" />
       <updated>1479928137921</updated>
     </task>
+    <task id="LOCAL-00001" summary="Got threading running">
+      <created>1480006041754</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1480006041754</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -649,7 +657,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4178499" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4178499" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -692,6 +700,12 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Got threading running" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got threading running" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
