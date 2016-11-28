@@ -45,12 +45,10 @@ public class Job extends BaseObject implements Runnable {
         System.out.println(String.format("Beginning %s. Will take %.2f seconds", name, duration));
         done = false;
         long time = System.currentTimeMillis();
-        long startTime = time;
         long stopTime = time + (long) (1000 * duration);
-        double duration = stopTime - time;
 
         while(time < stopTime) {
-            double remaining = (long) ((stopTime - time) / 1000);
+            double remaining = ((stopTime - time) / 1000);
             try {
                 Thread.sleep(1000);
                 System.out.println(String.format("%s is running. Remaining time %.0f", name, remaining));
@@ -66,4 +64,5 @@ public class Job extends BaseObject implements Runnable {
         return done;
     }
 
+    public double getDuration() { return duration; }
 }

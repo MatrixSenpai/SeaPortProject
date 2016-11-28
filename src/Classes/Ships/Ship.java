@@ -6,8 +6,9 @@ import Classes.Job;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class Ship extends BaseObject {
     private double weight;
@@ -17,8 +18,10 @@ public class Ship extends BaseObject {
 
     private HashMap<Integer, Job> jobs = new HashMap<Integer, Job>();
 
-    public Ship() { super(); }
+    private Object lock = new Object();
+    private ScheduledExecutorService scheduler;
 
+    public Ship() { super(); }
     public Ship(String n) {
         super(n);
     }
@@ -32,6 +35,7 @@ public class Ship extends BaseObject {
         draft = d;
     }
 
+    // Display/UI Methods
     @Override
     public String toString() {
         String rtr = "";
@@ -42,21 +46,6 @@ public class Ship extends BaseObject {
 
         return rtr;
     }
-
-    public void shipShouldBeginWorking() {
-        synchronized(this) {
-            for (Map.Entry<Integer, Job> jobEntry : jobs.entrySet()) {
-                try {
-                    Thread t = new Thread(jobEntry.getValue());
-                    t.start();
-                    t.join();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
     @Override
     public DefaultMutableTreeNode getTree(Integer i) {
         // Meant to be called by children to return specs
@@ -68,7 +57,6 @@ public class Ship extends BaseObject {
 
         return rootNode;
     }
-
     public DefaultMutableTreeNode getJobTree() {
         DefaultMutableTreeNode jobsNode = new DefaultMutableTreeNode("Jobs");
         for(Map.Entry<Integer, Job> jobEntry: jobs.entrySet()) {
@@ -78,6 +66,20 @@ public class Ship extends BaseObject {
         return jobsNode;
     }
 
+    public void shipShouldBeginWorking() {
+        synchronized(lock) {
+            scheduler = Executors.newSingleThreadScheduledExecutor();
+            for (Map.Entry<Integer, Job> jobEntry : jobs.entrySet()) {
+                Job j = jobEntry.getValue();
+                scheduler.scheduleAtFixedRate(j, 0, (long) j.getDuration(), TimeUnit.SECONDS);
+            }
+        }
+    }
+    public void shipShouldEndWorking() {
+        scheduler.shutdown();
+    }
+
+    // Getters/Setters
     public void addJob(Integer k, Job j) { jobs.put(k, j); }
     public Job findJob(Integer i) {
         if(jobs.containsKey(i)) {

@@ -16,6 +16,7 @@ public class World extends BaseObject {
 
     }
 
+    // UI/Display Methods
     @Override
     public String toString() {
         String rtr = "";
@@ -33,10 +34,22 @@ public class World extends BaseObject {
 
         return rtr;
     }
+    public JTree getTree() {
+        DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode("root");
+
+        for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
+            Integer i = portEntry.getKey();
+            Port p = portEntry.getValue();
+
+            rootNode.add(p.getTree(i));
+        }
+
+        return new JTree(rootNode);
+    }
 
     public void processFile(File f) {
         try (Scanner sc = new Scanner(f)) {
-            while(sc.hasNext()) {
+            while (sc.hasNext()) {
                 switch (sc.next()) {
                     case "port":
                         addPort(sc);
@@ -57,35 +70,26 @@ public class World extends BaseObject {
                         addJob(sc);
                         break;
                     default: // Ignore trash
-                        if(sc.hasNextLine()) sc.nextLine();
+                        if (sc.hasNextLine()) sc.nextLine();
                         break;
                 }
             }
 
             sc.close();
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
-
-        startJobs();
     }
 
-    public JTree getTree() {
-        DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode("root");
-
-        for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
-            Integer i = portEntry.getKey();
-            Port p = portEntry.getValue();
-
-            rootNode.add(p.getTree(i));
-        }
-
-        return new JTree(rootNode);
-    }
-
+    // Jobs methods
     public void startJobs() {
         for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
             portEntry.getValue().startJobs();
+        }
+    }
+    public void stopJobs() {
+        for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
+            portEntry.getValue().stopJobs();
         }
     }
 

@@ -4,14 +4,13 @@ import Base.BaseObject;
 import Classes.Ships.Ship;
 
 import javax.swing.tree.DefaultMutableTreeNode;
-import java.util.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class Dock extends BaseObject {
 
     private Ship dockedShip;
     private Integer shipID;
+
+    private Object lock = new Object();
 
     public Dock() {
         super();
@@ -21,6 +20,7 @@ public class Dock extends BaseObject {
         super(n, p);
     }
 
+    // Display/UI Methods
     @Override
     public String toString() {
         String rtr = "";
@@ -32,7 +32,6 @@ public class Dock extends BaseObject {
 
         return rtr;
     }
-
     @Override
     public DefaultMutableTreeNode getTree(Integer i) {
         DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(String.format("%d: %s", i, name));
@@ -42,10 +41,21 @@ public class Dock extends BaseObject {
         return rootNode;
     }
 
+    // Jobs Methods
     public void startJobs() {
         dockedShip.shipShouldBeginWorking();
     }
+    public void stopJobs() {
+        dockedShip.shipShouldEndWorking();
+    }
 
+    public void shipDidFinish() {
+        // TODO
+        // De-init docked ship (mark as complete),
+        // grab next ship from queue, restart process
+    }
+
+    // Getters/Setters
     public void setDockedShip(Integer i, Ship s) {
         dockedShip = s;
         shipID = i;

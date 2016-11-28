@@ -1,16 +1,16 @@
 package Base;
 
 import Classes.*;
-import org.jetbrains.annotations.TestOnly;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
+import javax.swing.table.AbstractTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -32,18 +32,16 @@ public class MainInterface extends JFrame {
     private JButton startJobsButton;
     private JButton stopJobsButton;
 
+    private JTable jobsTable;
+
     private World world;
 
     // Main Constructor
-    public MainInterface() throws IllegalStateException {
+    private MainInterface() throws IllegalStateException {
         world = new World();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        boolean didLoad = initGUI();
-
-        //if(!didLoad) { throw new IllegalStateException("Could not init GUI"); }
-
-        return;
+        initGUI();
     }
 
     // GUI Initialization
@@ -62,6 +60,7 @@ public class MainInterface extends JFrame {
 
         initMenuBar();
         initTree();
+        initJobDisplay();
         initUIElements();
 
         validate();
@@ -93,8 +92,31 @@ public class MainInterface extends JFrame {
 
         menuBar.add(fileMenu);
 
-        setJMenuBar(menuBar);
 
+        JMenu jobMenu = new JMenu("Jobs");
+
+        JMenuItem start = new JMenuItem("Begin Jobs");
+        start.addActionListener((ActionEvent e) -> {
+            world.startJobs();
+        });
+        jobMenu.add(start);
+
+        JMenuItem pause = new JMenuItem("Pause Jobs");
+        pause.addActionListener((ActionEvent e) -> {
+            // TODO:
+            // Implement a method to pause all jobs
+        });
+        jobMenu.add(pause);
+
+        JMenuItem stop  = new JMenuItem("Stop Jobs");
+        stop.addActionListener((ActionEvent e) -> {
+            world.stopJobs();
+        });
+        jobMenu.add(stop);
+
+        menuBar.add(jobMenu);
+
+        setJMenuBar(menuBar);
     }
     private void initTree() {
         DefaultMutableTreeNode baseNode = new DefaultMutableTreeNode("Tree Empty");
@@ -106,31 +128,29 @@ public class MainInterface extends JFrame {
         worldTree.setShowsRootHandles(true);
         add(treeScroll, BorderLayout.WEST);
     }
+    private void initJobDisplay() {
+        Object[][] data = {
+                {
+                        "TEST.0x001", "TEST.SHIP.01 - DOCK1", new Integer(50), new JProgressBar(0, 100)
+                },
+                {
+                        "TEST.0x002", "TEST.SHIP.02 - DOCK1", new Integer(50), new JProgressBar()
+                }
+        };
+
+        jobsTable = new JTable(new JobsTableModel(data));
+
+        JScrollPane tableScroll = new JScrollPane(jobsTable);
+        tableScroll.setPreferredSize(new Dimension(this.getWidth(), (int) (this.getHeight() * 0.15)));
+
+        add(tableScroll, BorderLayout.SOUTH);
+    }
     private void initUIElements() {
         // Init Text Area
         textArea = new JTextArea();
         textArea.setText("Please select a file to open!");
         JScrollPane scrollPane = new JScrollPane(textArea);
         add(scrollPane, BorderLayout.CENTER);
-
-        // Init Buttons
-        JPanel panel = new JPanel();
-        panel.setLayout(new FlowLayout(FlowLayout.RIGHT));
-
-        startJobsButton = new JButton("Start Jobs");
-        startJobsButton.addActionListener((ActionEvent e) -> {
-            world.startJobs();
-        });
-
-        stopJobsButton = new JButton("Stop Jobs");
-        stopJobsButton.addActionListener((ActionEvent e) -> {
-            // TODO: finish method
-        });
-        panel.add(startJobsButton);
-        panel.add(stopJobsButton);
-
-        add(panel, BorderLayout.SOUTH);
-
     }
 
     // File Actions
@@ -173,7 +193,6 @@ public class MainInterface extends JFrame {
             while(sc.hasNextLine()) {
                 textArea.append(sc.nextLine());
             }
-            return;
         } catch (IOException e) {
             textArea.setText("There was an error processing the file...");
             e.printStackTrace();
@@ -186,6 +205,5 @@ public class MainInterface extends JFrame {
             MainInterface main = new MainInterface();
             main.setVisible(true);
         });
-        return;
     }
 }

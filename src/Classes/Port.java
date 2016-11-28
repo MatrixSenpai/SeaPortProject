@@ -4,9 +4,7 @@ import Base.*;
 import Classes.Ships.*;
 
 import javax.swing.tree.DefaultMutableTreeNode;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class Port extends BaseObject {
 
@@ -23,6 +21,7 @@ public class Port extends BaseObject {
         super(n);
     }
 
+    // UI/Display Methods
     @Override
     public String toString() {
         String rtr = "";
@@ -53,7 +52,6 @@ public class Port extends BaseObject {
         rtr += "\n\n"; // Pushing the next string down
         return rtr;
     }
-
     @Override
     public DefaultMutableTreeNode getTree(Integer i) {
         DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(String.format("%d: %s", i, name));
@@ -79,9 +77,15 @@ public class Port extends BaseObject {
         return rootNode;
     }
 
+    // Jobs Methods
     public void startJobs() {
         for(Map.Entry<Integer, Dock> dockEntry: docks.entrySet()) {
             dockEntry.getValue().startJobs();
+        }
+    }
+    public void stopJobs() {
+        for(Map.Entry<Integer, Dock> dockEntry: docks.entrySet()) {
+            dockEntry.getValue().stopJobs();
         }
     }
 
@@ -91,7 +95,6 @@ public class Port extends BaseObject {
     }
     public void addQueue(Integer k, Ship s) { queue.put(k, s); }
     public void addPerson(Integer k, Person p) {persons.put(k, p); }
-
 
     // Search methods
     public Dock findDock(Integer i) {
