@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="Goddt threading running">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Base/JobsTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface$1.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Dock.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Dock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Port.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Port.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/Ship.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/Ship.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/World.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/World.class" />
+    <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Base/MainInterface.java" afterPath="$PROJECT_DIR$/src/Base/MainInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Dock.java" afterPath="$PROJECT_DIR$/src/Classes/Dock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Job.java" afterPath="$PROJECT_DIR$/src/Classes/Job.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Port.java" afterPath="$PROJECT_DIR$/src/Classes/Port.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" afterPath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/World.java" afterPath="$PROJECT_DIR$/src/Classes/World.java" />
     </list>
     <ignored path="SeaPorts_Phillips.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/Base/MainInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="246">
-              <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
+              <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
@@ -682,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480006041754</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Threads running concurrently on all docks, working on displaying them inside a table as they run">
+      <created>1480315446392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1480315446392</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -752,7 +745,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Got threading running" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got threading running" />
+    <MESSAGE value="Threads running concurrently on all docks, working on displaying them inside a table as they run" />
+    <option name="LAST_COMMIT_MESSAGE" value="Threads running concurrently on all docks, working on displaying them inside a table as they run" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1353,7 +1347,7 @@
     <entry file="file://$PROJECT_DIR$/src/Base/MainInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
-          <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
+          <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
