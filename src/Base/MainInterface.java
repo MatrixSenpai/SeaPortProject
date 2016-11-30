@@ -6,9 +6,13 @@ import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
@@ -129,19 +133,35 @@ public class MainInterface extends JFrame {
         add(treeScroll, BorderLayout.WEST);
     }
     private void initJobDisplay() {
+        jobsTable = new JTable();
+
+        String[] columnNames = {"Job", "Ship/Dock", "Total Time", "Progress"};
         Object[][] data = {
                 {
-                        "TEST.0x001", "TEST.SHIP.01 - DOCK1", new Integer(50), new JProgressBar(0, 100)
+                        "TEST.0x001", "TEST.SHIP.01 - DOCK1", new Integer(50),
+                        new DefaultTableCellRenderer().getTableCellRendererComponent(jobsTable, new JProgressBar(0, 100), false, false, 0, 3)
                 },
                 {
                         "TEST.0x002", "TEST.SHIP.02 - DOCK1", new Integer(50), new JProgressBar()
                 }
         };
 
-        jobsTable = new JTable(new JobsTableModel(data));
+        jobsTable.setModel(new DefaultTableModel(data, columnNames));
 
         JScrollPane tableScroll = new JScrollPane(jobsTable);
         tableScroll.setPreferredSize(new Dimension(this.getWidth(), (int) (this.getHeight() * 0.15)));
+
+        jobsTable.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                textArea.setText(e.getSource().toString());
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+
+            }
+        });
 
         add(tableScroll, BorderLayout.SOUTH);
     }
