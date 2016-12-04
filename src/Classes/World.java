@@ -109,6 +109,12 @@ public class World extends BaseObject {
     public void updateJob(Job j) {
         mainint.updateJob(j);
     }
+    public void jobDidComplete(Job j) {
+        mainint.removeJob(j);
+    }
+    public void shipDidLeaveDock() {
+        mainint.updateTreeAfterNewShip();
+    }
 
     // MARK: - Private Add/Create methods
     private void addPort(Scanner sc) {

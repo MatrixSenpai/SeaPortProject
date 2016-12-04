@@ -2,12 +2,15 @@ package Base;
 
 import Classes.Job;
 
+import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.table.AbstractTableModel;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 public class UpdatableTableModel extends AbstractTableModel {
     private ArrayList<Job> jobs;
+    private String[] columnNames = {"Job Name", "Duration", "Skills", "Progress", "Suspend", "Cancel"};
 
     public UpdatableTableModel() { jobs = new ArrayList<>(); }
 
@@ -19,30 +22,12 @@ public class UpdatableTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 5;
+        return 6;
     }
 
     @Override
     public String getColumnName(int column) {
-        String name = "??";
-        switch (column) {
-            case 0:
-                name = "Job Name";
-                break;
-            case 1:
-                name = "Duration";
-                break;
-            case 2:
-                name = "Skills";
-                break;
-            case 3:
-                name = "Progress";
-                break;
-            case 4:
-                name = "Actions";
-                break;
-        }
-        return name;
+        return columnNames[column];
     }
 
     @Override
@@ -54,13 +39,19 @@ public class UpdatableTableModel extends AbstractTableModel {
                 value = j.name;
                 break;
             case 1:
-                value = j.getDuration();
+                value = String.format("%.2f seconds", j.getDuration());
                 break;
             case 2:
                 value = j.getSkills();
                 break;
             case 3:
                 value = j.getProgress();
+                break;
+            case 4:
+                value = "Suspend/Resume";
+                break;
+            case 5:
+                value = "Cancel";
                 break;
         }
         return value;
@@ -70,12 +61,27 @@ public class UpdatableTableModel extends AbstractTableModel {
         jobs.add(j);
         fireTableRowsInserted(jobs.size() - 1, jobs.size() - 1);
     }
+    public void removeJob(Job j) {
+        jobs.remove(j);
+        fireTableRowsDeleted(jobs.size() - 1, jobs.size() - 1);
+    }
 
     protected void updateStatus(Job j) {
         int row = jobs.indexOf(j);
         float p = (float) j.getProgress();
         setValueAt(p, row, 3);
         fireTableCellUpdated(row, 3);
-        fireTableDataChanged();
+    }
+
+    public void handleClick(int c, int r) {
+        Job j = jobs.get(r);
+        switch (c) {
+            case 4:
+                j.toggleFlag();
+                break;
+            case 5:
+                j.stop();
+                break;
+        }
     }
 }

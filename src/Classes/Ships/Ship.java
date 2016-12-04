@@ -1,8 +1,10 @@
 package Classes.Ships;
 
 import Base.BaseObject;
+import Classes.Dock;
 import Classes.Job;
 
+import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.HashMap;
 import java.util.Map;
@@ -73,7 +75,7 @@ public class Ship extends BaseObject {
             for (Map.Entry<Integer, Job> jobEntry : jobs.entrySet()) {
                 Job j = jobEntry.getValue();
                 baseWorld.jobReportedRunning(j);
-                scheduler.scheduleAtFixedRate(j, 0, (long) j.getDuration(), TimeUnit.SECONDS);
+                scheduler.submit(j);
             }
         }
     }
@@ -89,6 +91,17 @@ public class Ship extends BaseObject {
         synchronized (lock) {
             scheduler.shutdownNow();
         }
+    }
+    public void jobDidFinish() {
+        for(Map.Entry<Integer, Job> jobEntry: jobs.entrySet()) {
+            Job j = jobEntry.getValue();
+            if(!j.isEndFlag()) {
+                return;
+            }
+        }
+
+        Dock p = (Dock) baseWorld.findObject(parent);
+        p.shipDidFinish();
     }
 
     // Getters/Setters

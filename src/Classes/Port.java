@@ -149,6 +149,12 @@ public class Port extends BaseObject {
         return null;
     }
 
+    public Ship dockWantsNextShip() {
+        Ship s = queue.entrySet().iterator().next().getValue();
+        queue.remove(s);
+        return s;
+    }
+
     @Override
     public BaseObject matchesAnyComponent(String searchTerm) {
         BaseObject b = super.matchesAnyComponent(searchTerm);

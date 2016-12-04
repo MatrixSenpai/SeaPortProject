@@ -2,6 +2,7 @@ package Classes;
 
 import Base.BaseObject;
 import Base.MainInterface;
+import Classes.Ships.Ship;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -13,6 +14,8 @@ public class Job extends BaseObject implements Runnable {
 
     private double progress = 0;
     private boolean runFlag = true;
+    private boolean endFlag = false;
+    private boolean finishFlag = false;
 
     public Job() { super(); }
     public Job(String n) { super(n); }
@@ -50,6 +53,7 @@ public class Job extends BaseObject implements Runnable {
             try {
                 Thread.sleep(500);
                 if(!runFlag) { continue; }
+                if(endFlag) { finished(); return; }
                 time += 0.5;
                 progress = ((time/duration) * 100);
                 updateStatus();
@@ -57,15 +61,31 @@ public class Job extends BaseObject implements Runnable {
                 return;
             }
         }
+       finished();
     }
 
     public double getDuration() { return duration; }
-    public String getSkills() { return String.join(", ", skills); }
+    public String getSkills() {
+        if(skills.isEmpty()) return "None";
+        return String.join(", ", skills);
+    }
     public double getProgress() {
         return progress;
     }
+    public boolean isEndFlag() {
+        return finishFlag;
+    }
+
     public void toggleFlag() {
         runFlag = !runFlag;
+    }
+    public void stop() { endFlag = true; }
+
+    private void finished() {
+        finishFlag = true;
+        baseWorld.jobDidComplete(this);
+        Ship s = (Ship) baseWorld.findObject(parent);
+        s.jobDidFinish();
     }
 
     private void updateStatus() {

@@ -53,9 +53,12 @@ public class Dock extends BaseObject {
     }
 
     public void shipDidFinish() {
-        // TODO
-        // De-init docked ship (mark as complete),
-        // grab next ship from queue, restart process
+        dockedShip = null;
+        Port p = (Port) baseWorld.findObject(parent);
+        dockedShip = p.dockWantsNextShip();
+
+        baseWorld.shipDidLeaveDock();
+        startJobs();
     }
 
     // Getters/Setters

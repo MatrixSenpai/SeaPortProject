@@ -126,6 +126,16 @@ public class MainInterface extends JFrame {
         jobsTable = new JTable(model);
         jobsTable.getColumn("Progress").setCellRenderer(new ProgressCellRenderer());
 
+        jobsTable.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JTable target = (JTable) e.getSource();
+                int c = target.getSelectedColumn();
+                int r = target.getSelectedRow();
+                ((UpdatableTableModel) jobsTable.getModel()).handleClick(c, r);
+            }
+        });
+
         JScrollPane tableScroll = new JScrollPane(jobsTable);
         tableScroll.setPreferredSize(new Dimension(this.getWidth(), (int) (this.getHeight() * 0.15)));
         add(tableScroll, BorderLayout.SOUTH);
@@ -169,6 +179,13 @@ public class MainInterface extends JFrame {
     public void updateJob(Job j) {
         ((UpdatableTableModel) (jobsTable.getModel())).updateStatus(j);
     }
+    public void removeJob(Job j) {
+        ((UpdatableTableModel) (jobsTable.getModel())).removeJob(j);
+    }
+    public void updateTreeAfterNewShip() {
+        JTree updatedTree = world.getTree();
+        handleTreeUpdate(updatedTree);
+    }
 
     // File Actions
     private void loadFile() throws IOException {
@@ -184,7 +201,7 @@ public class MainInterface extends JFrame {
         else { throw new IOException("File selection was invalid"); }
 
         JTree newTree = world.getTree();
-        worldTree.setModel(newTree.getModel());
+        handleTreeUpdate(newTree);
         worldTree.addTreeSelectionListener(new TreeSelectionListener() {
             @Override
             public void valueChanged(TreeSelectionEvent e) {
@@ -195,9 +212,14 @@ public class MainInterface extends JFrame {
         });
 
         textArea.setText(String.format("%s", world));
+        world.startJobs();
     }
 
     // Listeners
+    private void handleTreeUpdate(JTree t) {
+        worldTree.setModel(t.getModel());
+        worldTree.treeDidChange();
+    }
     private void handleTreeSelection(Integer i) throws NoSuchElementException {
         BaseObject o = world.findObject(i);
         if(o == null) { throw new NoSuchElementException(String.format("Object at index %d was not found!", i)); }
