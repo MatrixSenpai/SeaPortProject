@@ -56,19 +56,22 @@ public class Port extends BaseObject {
     public DefaultMutableTreeNode getTree(Integer i) {
         DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(String.format("%d: %s", i, name));
 
-        DefaultMutableTreeNode dockNode = new DefaultMutableTreeNode("Docks");
+        Integer dc = docks.size();
+        DefaultMutableTreeNode dockNode = new DefaultMutableTreeNode(String.format("Docks (%d)", dc));
         for(Map.Entry<Integer, Dock> dockEntry: docks.entrySet()) {
             dockNode.add(dockEntry.getValue().getTree(dockEntry.getKey()));
         }
         rootNode.add(dockNode);
 
-        DefaultMutableTreeNode queueNode = new DefaultMutableTreeNode("Port Queue");
+        Integer pc = queue.size();
+        DefaultMutableTreeNode queueNode = new DefaultMutableTreeNode(String.format("Port Queue (%d ships)", pc));
         for(Map.Entry<Integer, Ship> shipEntry: queue.entrySet()) {
             queueNode.add(shipEntry.getValue().getTree(shipEntry.getKey()));
         }
         rootNode.add(queueNode);
 
-        DefaultMutableTreeNode personnelNode = new DefaultMutableTreeNode("Personnel Assigned");
+        Integer ppc = persons.size();
+        DefaultMutableTreeNode personnelNode = new DefaultMutableTreeNode(String.format("Personnel Assigned (%d)", ppc));
         for(Map.Entry<Integer, Person> personEntry: persons.entrySet()) {
             personnelNode.add(personEntry.getValue().getTree(personEntry.getKey()));
         }
@@ -150,6 +153,7 @@ public class Port extends BaseObject {
     }
 
     public Ship dockWantsNextShip() {
+        if(queue.size() < 1) { return new Ship(); }
         Ship s = queue.entrySet().iterator().next().getValue();
         queue.remove(s);
         return s;

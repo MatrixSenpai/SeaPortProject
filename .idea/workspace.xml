@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Base/Time.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/UpdatableTableModel.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/UpdatableTableModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Base/MainInterface.java" afterPath="$PROJECT_DIR$/src/Base/MainInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Base/UpdatableTableModel.java" afterPath="$PROJECT_DIR$/src/Base/UpdatableTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Dock.java" afterPath="$PROJECT_DIR$/src/Classes/Dock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Job.java" afterPath="$PROJECT_DIR$/src/Classes/Job.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Port.java" afterPath="$PROJECT_DIR$/src/Classes/Port.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" afterPath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/World.java" afterPath="$PROJECT_DIR$/src/Classes/World.java" />
     </list>
     <ignored path="SeaPorts_Phillips.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,8 +144,8 @@
       <file leaf-file-name="Port.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Classes/Port.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="151" column="36" selection-start-line="151" selection-start-column="36" selection-end-line="151" selection-end-column="36" />
+            <state relative-caret-position="401">
+              <caret line="155" column="51" selection-start-line="155" selection-start-column="51" selection-end-line="155" selection-end-column="51" />
               <folding>
                 <element signature="method#Port#1;class#Port#0" expanded="false" />
                 <element signature="method#toString#0;class#Port#0" expanded="false" />
@@ -169,7 +158,6 @@
                 <element signature="method#findJob#0;class#Port#0" expanded="false" />
                 <element signature="method#findPerson#0;class#Port#0" expanded="false" />
                 <element signature="method#findPersonWithSkill#0;class#Port#0" expanded="false" />
-                <element signature="method#dockWantsNextShip#0;class#Port#0" expanded="false" />
                 <element signature="method#matchesAnyComponent#0;class#Port#0" expanded="false" />
               </folding>
             </state>
@@ -223,12 +211,12 @@
         <option value="$PROJECT_DIR$/src/Base/JobActionPane.java" />
         <option value="$PROJECT_DIR$/src/Base/Time.java" />
         <option value="$PROJECT_DIR$/src/Base/UpdatableTableModel.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Port.java" />
         <option value="$PROJECT_DIR$/src/Base/MainInterface.java" />
         <option value="$PROJECT_DIR$/src/Classes/World.java" />
         <option value="$PROJECT_DIR$/src/Classes/Dock.java" />
         <option value="$PROJECT_DIR$/src/Classes/Ships/Ship.java" />
         <option value="$PROJECT_DIR$/src/Classes/Job.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Port.java" />
       </list>
     </option>
   </component>
@@ -1338,8 +1326,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/Port.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="151" column="36" selection-start-line="151" selection-start-column="36" selection-end-line="151" selection-end-column="36" />
+        <state relative-caret-position="401">
+          <caret line="155" column="51" selection-start-line="155" selection-start-column="51" selection-end-line="155" selection-end-column="51" />
           <folding>
             <element signature="method#Port#1;class#Port#0" expanded="false" />
             <element signature="method#toString#0;class#Port#0" expanded="false" />
@@ -1352,7 +1340,6 @@
             <element signature="method#findJob#0;class#Port#0" expanded="false" />
             <element signature="method#findPerson#0;class#Port#0" expanded="false" />
             <element signature="method#findPersonWithSkill#0;class#Port#0" expanded="false" />
-            <element signature="method#dockWantsNextShip#0;class#Port#0" expanded="false" />
             <element signature="method#matchesAnyComponent#0;class#Port#0" expanded="false" />
           </folding>
         </state>
