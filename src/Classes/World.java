@@ -1,6 +1,7 @@
 package Classes;
 
 import Base.BaseObject;
+import Base.MainInterface;
 import Classes.Ships.*;
 
 import javax.swing.*;
@@ -11,9 +12,14 @@ import java.util.*;
 public class World extends BaseObject {
 
     private HashMap<Integer, Port> ports = new HashMap<Integer, Port>();
+    private MainInterface mainint;
+    private HashMap<Integer, Job> runningJobs = new HashMap<>();
 
     public World() {
 
+    }
+    public void setInterface(MainInterface m) {
+        mainint = m;
     }
 
     // UI/Display Methods
@@ -91,6 +97,12 @@ public class World extends BaseObject {
         for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
             portEntry.getValue().stopJobs();
         }
+    }
+    public void jobReportedRunning(Job j) {
+        mainint.addNewJob(j);
+    }
+    public void updateJob(Job j) {
+        mainint.updateJob(j);
     }
 
     // MARK: - Private Add/Create methods
@@ -190,6 +202,25 @@ public class World extends BaseObject {
 
         return null;
     }
+    public Integer findObject(BaseObject b) {
+        Integer rtr = 0;
+
+        rtr = findPort(b);
+        if(rtr != 0) { return rtr; }
+
+        rtr = findDock(b);
+        if(rtr != 0) { return rtr; }
+
+        rtr = findShip(b);
+        if(rtr != 0) { return rtr; }
+
+        rtr = findPerson(b);
+        if(rtr != 0) { return rtr; }
+
+        rtr = findJob(b);
+        if(rtr != 0) { return rtr; }
+        return 0;
+    }
 
     // MARK: - Private FindBaseObject methods
     private Port findPort(int i) {
@@ -197,6 +228,12 @@ public class World extends BaseObject {
             return ports.get(i);
         }
         return null;
+    }
+    private Integer findPort(BaseObject b) {
+        for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
+            if(b.equals(portEntry.getValue())) { return portEntry.getKey(); }
+        }
+        return 0;
     }
     private Dock findDock(int i) {
         for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
@@ -206,12 +243,18 @@ public class World extends BaseObject {
         }
         return null;
     }
+    private Integer findDock(BaseObject b) {
+        return 0;
+    }
     private Ship findShip(int i) {
         for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
             Ship s = portEntry.getValue().findShip(i);
             if(s != null) { return s; }
         }
         return null;
+    }
+    private Integer findShip(BaseObject b) {
+        return 0;
     }
     private Person findPerson(int i) {
         for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
@@ -220,11 +263,17 @@ public class World extends BaseObject {
         }
         return null;
     }
+    private Integer findPerson(BaseObject b) {
+        return 0;
+    }
     private Job findJob(int i) {
         for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
             Job j = portEntry.getValue().findJob(i);
             if(j != null) { return j; }
         }
         return null;
+    }
+    private Integer findJob(BaseObject b) {
+        return 0;
     }
 }

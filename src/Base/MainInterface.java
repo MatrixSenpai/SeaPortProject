@@ -5,44 +5,26 @@ import Classes.*;
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
+import java.awt.event.*;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.util.*;
 
-/**
- * Created by Matrix on 23-Nov-16.
- * MainInterface
- * Builds the main interaction interface and handles file building
- */
 public class MainInterface extends JFrame {
     static final long serialVersionUID = 23390000;
     private String fileName;
 
     private JTree worldTree;
-
     private JMenuBar menuBar;
-
     private JTextArea textArea;
-
-    private JButton startJobsButton;
-    private JButton stopJobsButton;
-
     private JTable jobsTable;
 
-    private World world;
+    private World world = BaseObject.baseWorld;
 
     // Main Constructor
     private MainInterface() throws IllegalStateException {
-        world = new World();
+        world.setInterface(this);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initGUI();
@@ -133,36 +115,12 @@ public class MainInterface extends JFrame {
         add(treeScroll, BorderLayout.WEST);
     }
     private void initJobDisplay() {
-        jobsTable = new JTable();
-
-        String[] columnNames = {"Job", "Ship/Dock", "Total Time", "Progress"};
-        Object[][] data = {
-                {
-                        "TEST.0x001", "TEST.SHIP.01 - DOCK1", new Integer(50),
-                        new DefaultTableCellRenderer().getTableCellRendererComponent(jobsTable, new JProgressBar(0, 100), false, false, 0, 3)
-                },
-                {
-                        "TEST.0x002", "TEST.SHIP.02 - DOCK1", new Integer(50), new JProgressBar()
-                }
-        };
-
-        jobsTable.setModel(new DefaultTableModel(data, columnNames));
+        UpdatableTableModel model = new UpdatableTableModel();
+        jobsTable = new JTable(model);
+        jobsTable.getColumn("Progress").setCellRenderer(new ProgressCellRenderer());
 
         JScrollPane tableScroll = new JScrollPane(jobsTable);
         tableScroll.setPreferredSize(new Dimension(this.getWidth(), (int) (this.getHeight() * 0.15)));
-
-        jobsTable.addFocusListener(new FocusListener() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                textArea.setText(e.getSource().toString());
-            }
-
-            @Override
-            public void focusLost(FocusEvent e) {
-
-            }
-        });
-
         add(tableScroll, BorderLayout.SOUTH);
     }
     private void initUIElements() {
@@ -171,6 +129,14 @@ public class MainInterface extends JFrame {
         textArea.setText("Please select a file to open!");
         JScrollPane scrollPane = new JScrollPane(textArea);
         add(scrollPane, BorderLayout.CENTER);
+    }
+
+    // GUI Handlers and World Communication
+    public void addNewJob(Job j) {
+        ((UpdatableTableModel) (jobsTable.getModel())).addJob(j);
+    }
+    public void updateJob(Job j) {
+        ((UpdatableTableModel) (jobsTable.getModel())).updateStatus(j);
     }
 
     // File Actions

@@ -1,7 +1,9 @@
 package Classes;
 
 import Base.BaseObject;
+import Base.MainInterface;
 
+import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.ArrayList;
 
@@ -9,7 +11,7 @@ public class Job extends BaseObject implements Runnable {
     private double duration;
     private ArrayList<String> skills;
 
-    private boolean done;
+    private double progress = 0;
 
     public Job() { super(); }
     public Job(String n) { super(n); }
@@ -42,27 +44,26 @@ public class Job extends BaseObject implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(String.format("Beginning %s. Will take %.2f seconds", name, duration));
-        done = false;
-        long time = System.currentTimeMillis();
-        long stopTime = time + (long) (1000 * duration);
-
-        while(time < stopTime) {
-            double remaining = ((stopTime - time) / 1000);
+        double time = 0;
+        while(duration > time) {
+            progress = ((time/duration) * 100);
+            updateStatus();
             try {
-                Thread.sleep(1000);
-                System.out.println(String.format("%s is running. Remaining time %.0f", name, remaining));
-                time += 1000;
+                Thread.sleep(500);
+                time += 0.5;
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        System.out.println(String.format("Job %s has finished", name));
-    }
-
-    public boolean isDone() {
-        return done;
     }
 
     public double getDuration() { return duration; }
+    public String getSkills() { return String.join(", ", skills); }
+    public double getProgress() {
+        return progress;
+    }
+
+    private void updateStatus() {
+        baseWorld.updateJob(this);
+    }
 }

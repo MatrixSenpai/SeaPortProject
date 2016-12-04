@@ -1,14 +1,15 @@
 package Base;
 
+import Classes.World;
+
 import javax.swing.tree.DefaultMutableTreeNode;
 
-/**
- * Created by Matrix on 23-Nov-16.
- */
 public class BaseObject implements Comparable<BaseObject>, BaseObjectConformable {
 
     public String name;
     public Integer parent;
+
+    public static World baseWorld = new World();
 
     public BaseObject() {
         name = "";

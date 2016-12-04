@@ -71,6 +71,7 @@ public class Ship extends BaseObject {
             scheduler = Executors.newSingleThreadScheduledExecutor();
             for (Map.Entry<Integer, Job> jobEntry : jobs.entrySet()) {
                 Job j = jobEntry.getValue();
+                baseWorld.jobReportedRunning(j);
                 scheduler.scheduleAtFixedRate(j, 0, (long) j.getDuration(), TimeUnit.SECONDS);
             }
         }
