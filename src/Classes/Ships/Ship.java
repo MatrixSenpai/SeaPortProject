@@ -88,4 +88,24 @@ public class Ship extends BaseObject {
         }
         return null;
     }
+
+    // Search methods
+
+    @Override
+    public BaseObject matchesAnyComponent(String searchTerm) {
+        BaseObject b = super.matchesAnyComponent(searchTerm);
+        if(b != null) return b;
+
+        for(Map.Entry<Integer, Job> jobEntry: jobs.entrySet()) {
+            Integer index = jobEntry.getKey();
+            Job j = jobEntry.getValue();
+
+            if(super.matchesIndex(searchTerm, index)) return j;
+
+            b = j.matchesAnyComponent(searchTerm);
+            if(b != null) return b;
+        }
+
+        return null;
+    }
 }

@@ -39,4 +39,19 @@ public class BaseObject implements Comparable<BaseObject>, BaseObjectConformable
     public String toString() {
         return "";
     }
+
+    public BaseObject matchesAnyComponent(String searchTerm) {
+        if(name.equals(searchTerm)) return this;
+        if(matchesIndex(searchTerm, parent)) { return this; }
+        return null;
+    }
+    public BaseObject matchesAnyComponent(Integer searchIndex) {
+        return null;
+    }
+
+    protected boolean matchesIndex(String s, Integer i) {
+        try {
+            return i.equals(Integer.parseInt(s));
+        } catch (Exception e) { return false; }
+    }
 }

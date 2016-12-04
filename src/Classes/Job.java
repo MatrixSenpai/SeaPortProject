@@ -66,4 +66,13 @@ public class Job extends BaseObject implements Runnable {
     private void updateStatus() {
         baseWorld.updateJob(this);
     }
+
+    @Override
+    public BaseObject matchesAnyComponent(String searchTerm) {
+        BaseObject b = super.matchesAnyComponent(searchTerm);
+        if(b != null) return b;
+        if(skills.contains(searchTerm)) return this;
+
+        return null;
+    }
 }

@@ -134,4 +134,54 @@ public class Port extends BaseObject {
         }
         return null;
     }
+    public Person findPersonWithSkill(String skillName) {
+        for(Map.Entry<Integer, Person> personEntry: persons.entrySet()) {
+            Person p = personEntry.getValue();
+            if(p.hasSkill(skillName)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public BaseObject matchesAnyComponent(String searchTerm) {
+        BaseObject b = super.matchesAnyComponent(searchTerm);
+        if(b != null) return b;
+
+        for(Map.Entry<Integer, Dock> dockEntry: docks.entrySet()) {
+            Integer index = dockEntry.getKey();
+            Dock d = dockEntry.getValue();
+
+            if(super.matchesIndex(searchTerm, index)) return d;
+
+            b = d.matchesAnyComponent(searchTerm);
+
+            if(b != null) return b;
+        }
+
+        for(Map.Entry<Integer, Ship> shipEntry: queue.entrySet()) {
+            Integer index = shipEntry.getKey();
+            Ship s = shipEntry.getValue();
+
+            if(super.matchesIndex(searchTerm, index)) return s;
+
+            b = s.matchesAnyComponent(searchTerm);
+
+            if(b != null) return b;
+        }
+
+        for(Map.Entry<Integer, Person> personEntry: persons.entrySet()) {
+            Integer index = personEntry.getKey();
+            Person p = personEntry.getValue();
+
+            if(super.matchesIndex(searchTerm, index)) return p;
+
+            b = p.matchesAnyComponent(searchTerm);
+
+            if(b != null) return b;
+        }
+
+        return null;
+    }
 }

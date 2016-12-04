@@ -221,6 +221,34 @@ public class World extends BaseObject {
         if(rtr != 0) { return rtr; }
         return 0;
     }
+    public BaseObject findObject(String component) {
+        for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
+            Integer index = portEntry.getKey();
+            Port port = portEntry.getValue();
+
+            if(super.matchesIndex(component, index)) return port;
+
+            BaseObject b = port.matchesAnyComponent(component);
+
+            if(b != null) return b;
+        }
+        return null;
+    }
+
+    public ArrayList<Person> findSkill(String skillName) {
+        ArrayList<Person> peopleWithSkill = new ArrayList<>();
+        for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
+            Port p = portEntry.getValue();
+            Person rtr = p.findPersonWithSkill(skillName);
+            if(rtr != null) {
+                peopleWithSkill.add(rtr);
+            }
+        }
+
+        if(peopleWithSkill.isEmpty()) { return null; }
+
+        return peopleWithSkill;
+    }
 
     // MARK: - Private FindBaseObject methods
     private Port findPort(int i) {

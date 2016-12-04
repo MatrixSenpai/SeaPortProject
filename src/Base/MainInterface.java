@@ -19,6 +19,8 @@ public class MainInterface extends JFrame {
     private JMenuBar menuBar;
     private JTextArea textArea;
     private JTable jobsTable;
+    private JComboBox<String> searchType;
+    private JTextField searchInput;
 
     private World world = BaseObject.baseWorld;
 
@@ -129,6 +131,30 @@ public class MainInterface extends JFrame {
         textArea.setText("Please select a file to open!");
         JScrollPane scrollPane = new JScrollPane(textArea);
         add(scrollPane, BorderLayout.CENTER);
+
+        // Init Search Bar
+        JButton search = new JButton("Search");
+        search.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleSearch();
+            }
+        });
+
+        searchInput = new JTextField(10);
+
+        searchType = new JComboBox<>();
+        searchType.addItem("Any Type");
+        searchType.addItem("Index");
+        searchType.addItem("Skill");
+        searchType.addItem("Name");
+
+        JPanel searchPanel = new JPanel();
+        searchPanel.add(searchInput);
+        searchPanel.add(search);
+        searchPanel.add(searchType);
+
+        add(searchPanel, BorderLayout.PAGE_START);
     }
 
     // GUI Handlers and World Communication
@@ -183,6 +209,68 @@ public class MainInterface extends JFrame {
             textArea.setText("There was an error processing the file...");
             e.printStackTrace();
         }
+    }
+    private void handleSearch() {
+        if(fileName == null || fileName.isEmpty()) { displaySearchResults("Please load a file!"); return; }
+
+        Integer selected = searchType.getSelectedIndex();
+        String searchFor = searchInput.getText();
+
+        if(searchFor.isEmpty()) {
+            displaySearchResults("Please enter something to search for!");
+            return;
+        }
+
+        String displayResults = "";
+
+        switch (selected) {
+            case 1: // Search by Index
+                Integer searchInt;
+                try {
+                    searchInt = Integer.parseInt(searchFor);
+                } catch (Exception e) {
+                    displayResults = "Please enter a number to use this type of search!";
+                    break;
+                }
+
+                BaseObject searched = world.findObject(searchInt);
+
+                if(searched == null) {
+                    displayResults = "Could not find an object with that ID!";
+                    break;
+                }
+
+                displayResults = searched.toString();
+                break;
+            case 2: // Search by Skill
+                searchFor = searchFor.toLowerCase();
+                ArrayList<Person> results = world.findSkill(searchFor);
+                if(results.isEmpty()) {
+                    displayResults = "Could not find anyone with that skill!";
+                    break;
+                }
+                for (Person person : results) {
+                    displayResults += String.format("%s\n", person);
+                }
+                break;
+            case 3: // Search by Name
+            case 0: // Any - default
+                BaseObject b = world.findObject(searchFor);
+                if(b == null) {
+                    displayResults = "Could not find anything in this world with that name!";
+                    break;
+                }
+                displayResults = b.toString();
+                break;
+            default:
+                break;
+        }
+
+        displaySearchResults(displayResults);
+    }
+
+    private void displaySearchResults(String toDisplay) {
+        textArea.setText(toDisplay);
     }
 
     // MAIN

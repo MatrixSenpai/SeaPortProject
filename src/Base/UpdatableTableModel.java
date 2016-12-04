@@ -6,9 +6,6 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
 
-/**
- * Created by Matrix on 03-Dec-16.
- */
 public class UpdatableTableModel extends AbstractTableModel {
     private ArrayList<Job> jobs;
 

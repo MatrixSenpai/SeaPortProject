@@ -11,4 +11,6 @@ public interface BaseObjectConformable {
     String toString();
 
     DefaultMutableTreeNode getTree(Integer i); // Allows the parent to pass its index to the child
+    BaseObject matchesAnyComponent(String searchTerm);
+    BaseObject matchesAnyComponent(Integer searchIndex);
 }

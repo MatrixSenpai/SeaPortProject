@@ -33,4 +33,16 @@ public class Person extends BaseObject {
 
         return rootNode;
     }
+
+    public boolean hasSkill(String skillName) {
+        return skill.equals(skillName);
+    }
+
+    @Override
+    public BaseObject matchesAnyComponent(String searchTerm) {
+        BaseObject b = super.matchesAnyComponent(searchTerm);
+        if(b != null) return b;
+        if(hasSkill(searchTerm)) return this;
+        return null;
+    }
 }

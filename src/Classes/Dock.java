@@ -66,4 +66,16 @@ public class Dock extends BaseObject {
     public Ship getDockedShip() {
         return dockedShip;
     }
+
+    @Override
+    public BaseObject matchesAnyComponent(String searchTerm) {
+        BaseObject b = super.matchesAnyComponent(searchTerm);
+        if(b != null) return b;
+
+        if(super.matchesIndex(searchTerm, shipID)) return dockedShip;
+
+        b = dockedShip.matchesAnyComponent(searchTerm);
+
+        return b;
+    }
 }

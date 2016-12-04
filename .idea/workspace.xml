@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="" />
+    <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/BaseObject.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/BaseObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/BaseObjectConformable.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/BaseObjectConformable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/UpdatableTableModel.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/UpdatableTableModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Person.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Person.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Port.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Port.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/Ship.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/Ship.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/World.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/World.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Base/BaseObject.java" afterPath="$PROJECT_DIR$/src/Base/BaseObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Base/BaseObjectConformable.java" afterPath="$PROJECT_DIR$/src/Base/BaseObjectConformable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Base/MainInterface.java" afterPath="$PROJECT_DIR$/src/Base/MainInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Base/UpdatableTableModel.java" afterPath="$PROJECT_DIR$/src/Base/UpdatableTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Dock.java" afterPath="$PROJECT_DIR$/src/Classes/Dock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Job.java" afterPath="$PROJECT_DIR$/src/Classes/Job.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Person.java" afterPath="$PROJECT_DIR$/src/Classes/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Port.java" afterPath="$PROJECT_DIR$/src/Classes/Port.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" afterPath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/World.java" afterPath="$PROJECT_DIR$/src/Classes/World.java" />
+    </list>
     <ignored path="SeaPorts_Phillips.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,19 +47,154 @@
       <file leaf-file-name="MainInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Base/MainInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
+            <state relative-caret-position="204">
+              <caret line="257" column="16" selection-start-line="257" selection-start-column="16" selection-end-line="257" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
                 <element signature="method#initGUI#0;class#MainInterface#0" expanded="false" />
                 <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
                 <element signature="method#initTree#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#initJobDisplay#0;class#MainInterface#0" expanded="false" />
                 <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
+                <element signature="e#4373#4374#0" expanded="true" />
+                <element signature="e#4419#4420#0" expanded="true" />
                 <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
                 <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
                 <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
+                <element signature="e#9091#9092#0" expanded="true" />
+                <element signature="e#9134#9135#0" expanded="true" />
                 <element signature="method#main#0;class#MainInterface#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Base/BaseObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+              <folding>
+                <element signature="method#matchesIndex#0;class#BaseObject#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Classes/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="223" column="51" selection-start-line="223" selection-start-column="51" selection-end-line="223" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#World#0;class#World#0" expanded="false" />
+                <element signature="method#toString#0;class#World#0" expanded="false" />
+                <element signature="method#getTree#0;class#World#0" expanded="false" />
+                <element signature="method#processFile#0;class#World#0" expanded="false" />
+                <element signature="method#startJobs#0;class#World#0" expanded="false" />
+                <element signature="method#stopJobs#0;class#World#0" expanded="false" />
+                <element signature="method#addPort#0;class#World#0" expanded="false" />
+                <element signature="method#addDock#0;class#World#0" expanded="false" />
+                <element signature="method#addPassShip#0;class#World#0" expanded="false" />
+                <element signature="method#addCargoShip#0;class#World#0" expanded="false" />
+                <element signature="method#addPerson#0;class#World#0" expanded="false" />
+                <element signature="method#addJob#0;class#World#0" expanded="false" />
+                <element signature="method#findObject#0;class#World#0" expanded="false" />
+                <element signature="method#findObject#1;class#World#0" expanded="false" />
+                <element signature="method#findObject#2;class#World#0" expanded="false" />
+                <element signature="method#findSkill#0;class#World#0" expanded="false" />
+                <element signature="method#findPort#0;class#World#0" expanded="false" />
+                <element signature="method#findPort#1;class#World#0" expanded="false" />
+                <element signature="method#findDock#0;class#World#0" expanded="false" />
+                <element signature="method#findShip#0;class#World#0" expanded="false" />
+                <element signature="method#findPerson#0;class#World#0" expanded="false" />
+                <element signature="method#findJob#0;class#World#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Port.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Classes/Port.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="147" column="61" selection-start-line="147" selection-start-column="61" selection-end-line="147" selection-end-column="61" />
+              <folding>
+                <element signature="method#Port#1;class#Port#0" expanded="false" />
+                <element signature="method#toString#0;class#Port#0" expanded="false" />
+                <element signature="method#getTree#0;class#Port#0" expanded="false" />
+                <element signature="method#startJobs#0;class#Port#0" expanded="false" />
+                <element signature="method#stopJobs#0;class#Port#0" expanded="false" />
+                <element signature="method#findDock#0;class#Port#0" expanded="false" />
+                <element signature="method#findShip#0;class#Port#0" expanded="false" />
+                <element signature="method#findJob#0;class#Port#0" expanded="false" />
+                <element signature="method#findPerson#0;class#Port#0" expanded="false" />
+                <element signature="method#findPersonWithSkill#0;class#Port#0" expanded="false" />
+                <element signature="method#matchesAnyComponent#0;class#Port#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Classes/Dock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+              <folding>
+                <element signature="method#toString#0;class#Dock#0" expanded="false" />
+                <element signature="method#getTree#0;class#Dock#0" expanded="false" />
+                <element signature="method#shipDidFinish#0;class#Dock#0" expanded="false" />
+                <element signature="method#setDockedShip#0;class#Dock#0" expanded="false" />
+                <element signature="method#matchesAnyComponent#0;class#Dock#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ship.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Classes/Ships/Ship.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+              <folding>
+                <element signature="method#Ship#2;class#Ship#0" expanded="false" />
+                <element signature="method#toString#0;class#Ship#0" expanded="false" />
+                <element signature="method#getTree#0;class#Ship#0" expanded="false" />
+                <element signature="method#getJobTree#0;class#Ship#0" expanded="false" />
+                <element signature="method#shipShouldBeginWorking#0;class#Ship#0" expanded="false" />
+                <element signature="method#findJob#0;class#Ship#0" expanded="false" />
+                <element signature="method#matchesAnyComponent#0;class#Ship#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Classes/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+              <folding>
+                <element signature="method#Person#2;class#Person#0" expanded="false" />
+                <element signature="method#toString#0;class#Person#0" expanded="false" />
+                <element signature="method#getTree#0;class#Person#0" expanded="false" />
+                <element signature="method#matchesAnyComponent#0;class#Person#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Job.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Classes/Job.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+              <folding>
+                <element signature="method#Job#2;class#Job#0" expanded="false" />
+                <element signature="method#getTree#0;class#Job#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -49,6 +207,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -73,19 +232,21 @@
         <option value="$PROJECT_DIR$/src/Port.java" />
         <option value="$PROJECT_DIR$/src/Dock.java" />
         <option value="$PROJECT_DIR$/src/MainInterface.java" />
-        <option value="$PROJECT_DIR$/src/Base/BaseObject.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Person.java" />
         <option value="C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/misc/Unsafe.class" />
-        <option value="$PROJECT_DIR$/src/Base/BaseObjectConformable.java" />
         <option value="$PROJECT_DIR$/src/Classes/Ships/CargoShip.java" />
         <option value="$PROJECT_DIR$/src/Classes/Ships/PassengerShip.java" />
         <option value="$PROJECT_DIR$/Data/aSPac.txt" />
+        <option value="$PROJECT_DIR$/src/Base/JobsTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Base/UpdatableTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Base/BaseObjectConformable.java" />
+        <option value="$PROJECT_DIR$/src/Base/SearchType.java" />
+        <option value="$PROJECT_DIR$/src/Base/BaseObject.java" />
         <option value="$PROJECT_DIR$/src/Classes/World.java" />
         <option value="$PROJECT_DIR$/src/Classes/Port.java" />
         <option value="$PROJECT_DIR$/src/Classes/Dock.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Job.java" />
         <option value="$PROJECT_DIR$/src/Classes/Ships/Ship.java" />
-        <option value="$PROJECT_DIR$/src/Base/JobsTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Person.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Job.java" />
         <option value="$PROJECT_DIR$/src/Base/MainInterface.java" />
       </list>
     </option>
@@ -556,20 +717,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
-    <editor active="false" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286004" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31492248" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31440163" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2583423" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2583423" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -627,14 +788,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Base/MainInterface.java</url>
-          <line>156</line>
-          <properties />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog>
           <selected-grouping-rules>
@@ -642,7 +795,7 @@
           </selected-grouping-rules>
         </breakpoints-dialog>
       </breakpoints-dialog>
-      <option name="time" value="47" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -651,51 +804,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Classes/Job.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#Job#2;class#Job#0" expanded="false" />
-            <element signature="method#getTree#0;class#Job#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Ships/PassengerShip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Ships/CargoShip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Base/MainInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initGUI#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initTree#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#main#0;class#MainInterface#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/World.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -777,7 +885,6 @@
         <state relative-caret-position="459">
           <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#Job#2;class#Job#0" expanded="false" />
             <element signature="method#getTree#0;class#Job#0" expanded="false" />
           </folding>
@@ -815,10 +922,15 @@
             <element signature="method#initGUI#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initTree#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#initJobDisplay#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4419#4420#0" expanded="true" />
             <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
+            <element signature="e#9091#9092#0" expanded="true" />
+            <element signature="e#9134#9135#0" expanded="true" />
             <element signature="method#main#0;class#MainInterface#0" expanded="false" />
           </folding>
         </state>
@@ -905,7 +1017,6 @@
         <state relative-caret-position="459">
           <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#Job#2;class#Job#0" expanded="false" />
             <element signature="method#getTree#0;class#Job#0" expanded="false" />
           </folding>
@@ -930,10 +1041,15 @@
             <element signature="method#initGUI#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initTree#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#initJobDisplay#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4419#4420#0" expanded="true" />
             <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
+            <element signature="e#9091#9092#0" expanded="true" />
+            <element signature="e#9134#9135#0" expanded="true" />
             <element signature="method#main#0;class#MainInterface#0" expanded="false" />
           </folding>
         </state>
@@ -996,13 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/tree/DefaultMutableTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1024,13 +1133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Base/BaseObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/tree/TreeModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1046,13 +1148,6 @@
             <element signature="e#29578#29579#0" expanded="false" />
             <element signature="e#29610#29611#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Base/BaseObjectConformable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1105,10 +1200,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Base/JobsTableModel.java" />
+    <entry file="file://H:/SeaPortProgram_CMSC335/src/CMSC335Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#7566#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Base/UpdatableTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Base/ProgressCellRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Base/BaseObjectConformable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Base/SearchType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Base/BaseObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+          <folding>
+            <element signature="method#matchesIndex#0;class#BaseObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+        <state relative-caret-position="187">
+          <caret line="223" column="51" selection-start-line="223" selection-start-column="51" selection-end-line="223" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#World#0;class#World#0" expanded="false" />
@@ -1124,7 +1272,11 @@
             <element signature="method#addPerson#0;class#World#0" expanded="false" />
             <element signature="method#addJob#0;class#World#0" expanded="false" />
             <element signature="method#findObject#0;class#World#0" expanded="false" />
+            <element signature="method#findObject#1;class#World#0" expanded="false" />
+            <element signature="method#findObject#2;class#World#0" expanded="false" />
+            <element signature="method#findSkill#0;class#World#0" expanded="false" />
             <element signature="method#findPort#0;class#World#0" expanded="false" />
+            <element signature="method#findPort#1;class#World#0" expanded="false" />
             <element signature="method#findDock#0;class#World#0" expanded="false" />
             <element signature="method#findShip#0;class#World#0" expanded="false" />
             <element signature="method#findPerson#0;class#World#0" expanded="false" />
@@ -1135,10 +1287,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/Port.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state relative-caret-position="384">
+          <caret line="147" column="61" selection-start-line="147" selection-start-column="61" selection-end-line="147" selection-end-column="61" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#Port#1;class#Port#0" expanded="false" />
             <element signature="method#toString#0;class#Port#0" expanded="false" />
             <element signature="method#getTree#0;class#Port#0" expanded="false" />
@@ -1148,66 +1299,85 @@
             <element signature="method#findShip#0;class#Port#0" expanded="false" />
             <element signature="method#findJob#0;class#Port#0" expanded="false" />
             <element signature="method#findPerson#0;class#Port#0" expanded="false" />
+            <element signature="method#findPersonWithSkill#0;class#Port#0" expanded="false" />
+            <element signature="method#matchesAnyComponent#0;class#Port#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/Dock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+        <state relative-caret-position="384">
+          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#toString#0;class#Dock#0" expanded="false" />
             <element signature="method#getTree#0;class#Dock#0" expanded="false" />
             <element signature="method#shipDidFinish#0;class#Dock#0" expanded="false" />
             <element signature="method#setDockedShip#0;class#Dock#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Job.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#Job#2;class#Job#0" expanded="false" />
-            <element signature="method#getTree#0;class#Job#0" expanded="false" />
+            <element signature="method#matchesAnyComponent#0;class#Dock#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/Ships/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        <state relative-caret-position="384">
+          <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#Ship#2;class#Ship#0" expanded="false" />
             <element signature="method#toString#0;class#Ship#0" expanded="false" />
             <element signature="method#getTree#0;class#Ship#0" expanded="false" />
             <element signature="method#getJobTree#0;class#Ship#0" expanded="false" />
+            <element signature="method#shipShouldBeginWorking#0;class#Ship#0" expanded="false" />
             <element signature="method#findJob#0;class#Ship#0" expanded="false" />
+            <element signature="method#matchesAnyComponent#0;class#Ship#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Base/JobsTableModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/Classes/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+          <folding>
+            <element signature="method#Person#2;class#Person#0" expanded="false" />
+            <element signature="method#toString#0;class#Person#0" expanded="false" />
+            <element signature="method#getTree#0;class#Person#0" expanded="false" />
+            <element signature="method#matchesAnyComponent#0;class#Person#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/Job.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+          <folding>
+            <element signature="method#Job#2;class#Job#0" expanded="false" />
+            <element signature="method#getTree#0;class#Job#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Base/MainInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
+        <state relative-caret-position="204">
+          <caret line="257" column="16" selection-start-line="257" selection-start-column="16" selection-end-line="257" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initGUI#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initTree#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#initJobDisplay#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4419#4420#0" expanded="true" />
             <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
+            <element signature="e#9091#9092#0" expanded="true" />
+            <element signature="e#9134#9135#0" expanded="true" />
             <element signature="method#main#0;class#MainInterface#0" expanded="false" />
           </folding>
         </state>
