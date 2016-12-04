@@ -45,6 +45,9 @@ public class Dock extends BaseObject {
     public void startJobs() {
         dockedShip.shipShouldBeginWorking();
     }
+    public void toggleJobs() {
+        dockedShip.shipShouldPauseWorking();
+    }
     public void stopJobs() {
         dockedShip.shipShouldEndWorking();
     }

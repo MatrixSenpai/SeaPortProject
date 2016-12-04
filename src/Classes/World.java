@@ -93,6 +93,11 @@ public class World extends BaseObject {
             portEntry.getValue().startJobs();
         }
     }
+    public void toggleJobs() {
+        for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
+            portEntry.getValue().toggleJobs();
+        }
+    }
     public void stopJobs() {
         for(Map.Entry<Integer, Port> portEntry: ports.entrySet()) {
             portEntry.getValue().stopJobs();

@@ -66,6 +66,7 @@ public class Ship extends BaseObject {
         return jobsNode;
     }
 
+    // Jobs methods per ship
     public void shipShouldBeginWorking() {
         synchronized(lock) {
             scheduler = Executors.newSingleThreadScheduledExecutor();
@@ -76,8 +77,18 @@ public class Ship extends BaseObject {
             }
         }
     }
+    public void shipShouldPauseWorking() {
+        for(Map.Entry<Integer, Job> jobEntry: jobs.entrySet()) {
+            Job j = jobEntry.getValue();
+            synchronized (lock) {
+                j.toggleFlag();
+            }
+        }
+    }
     public void shipShouldEndWorking() {
-        scheduler.shutdown();
+        synchronized (lock) {
+            scheduler.shutdownNow();
+        }
     }
 
     // Getters/Setters

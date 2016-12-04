@@ -9,6 +9,7 @@ public class ProgressCellRenderer extends JProgressBar implements TableCellRende
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
         Integer progress = 0;
+        setStringPainted(true);
         if(value instanceof Integer) {
             progress = (int) value;
         } else if(value instanceof Double){
@@ -16,6 +17,7 @@ public class ProgressCellRenderer extends JProgressBar implements TableCellRende
         } else {
             progress = Math.round((Float) value);
         }
+        setString(String.format("%d%%", progress));
         setValue(progress);
         return this;
     }

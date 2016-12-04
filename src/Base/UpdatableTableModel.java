@@ -19,7 +19,7 @@ public class UpdatableTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 4;
+        return 5;
     }
 
     @Override
@@ -37,6 +37,9 @@ public class UpdatableTableModel extends AbstractTableModel {
                 break;
             case 3:
                 name = "Progress";
+                break;
+            case 4:
+                name = "Actions";
                 break;
         }
         return name;
@@ -66,16 +69,6 @@ public class UpdatableTableModel extends AbstractTableModel {
     public void addJob(Job j) {
         jobs.add(j);
         fireTableRowsInserted(jobs.size() - 1, jobs.size() - 1);
-    }
-
-    @Override
-    public void fireTableCellUpdated(int row, int column) {
-        super.fireTableCellUpdated(row, column);
-    }
-
-    @Override
-    public void fireTableChanged(TableModelEvent e) {
-        super.fireTableChanged(e);
     }
 
     protected void updateStatus(Job j) {

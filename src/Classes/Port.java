@@ -83,6 +83,11 @@ public class Port extends BaseObject {
             dockEntry.getValue().startJobs();
         }
     }
+    public void toggleJobs() {
+        for(Map.Entry<Integer, Dock> dockEntry: docks.entrySet()) {
+            dockEntry.getValue().toggleJobs();
+        }
+    }
     public void stopJobs() {
         for(Map.Entry<Integer, Dock> dockEntry: docks.entrySet()) {
             dockEntry.getValue().stopJobs();

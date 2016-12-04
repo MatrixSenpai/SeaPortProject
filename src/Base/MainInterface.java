@@ -72,6 +72,12 @@ public class MainInterface extends JFrame {
         });
         fileMenu.add(openFile);
 
+        JMenuItem showWorld = new JMenuItem("Show World");
+        showWorld.addActionListener((ActionEvent e) -> {
+            handleDisplayWorld();
+        });
+        fileMenu.add(showWorld);
+
         JMenuItem displayFile = new JMenuItem("Display Data File");
         displayFile.addActionListener((ActionEvent e) -> {
             handleDisplayFile();
@@ -83,20 +89,19 @@ public class MainInterface extends JFrame {
 
         JMenu jobMenu = new JMenu("Jobs");
 
-        JMenuItem start = new JMenuItem("Begin Jobs");
+        JMenuItem start = new JMenuItem("Begin All Jobs");
         start.addActionListener((ActionEvent e) -> {
             world.startJobs();
         });
         jobMenu.add(start);
 
-        JMenuItem pause = new JMenuItem("Pause Jobs");
+        JMenuItem pause = new JMenuItem("Pause/Resume All Jobs");
         pause.addActionListener((ActionEvent e) -> {
-            // TODO:
-            // Implement a method to pause all jobs
+            world.toggleJobs();
         });
         jobMenu.add(pause);
 
-        JMenuItem stop  = new JMenuItem("Stop Jobs");
+        JMenuItem stop  = new JMenuItem("Stop All Jobs");
         stop.addActionListener((ActionEvent e) -> {
             world.stopJobs();
         });
@@ -254,10 +259,25 @@ public class MainInterface extends JFrame {
                 }
                 break;
             case 3: // Search by Name
-            case 0: // Any - default
                 BaseObject b = world.findObject(searchFor);
                 if(b == null) {
                     displayResults = "Could not find anything in this world with that name!";
+                    break;
+                }
+                displayResults = b.toString();
+                break;
+            case 0: // Any - default
+                b = world.findObject(searchFor);
+                if(b == null) {
+                    searchFor = searchFor.toLowerCase();
+                    results = world.findSkill(searchFor);
+                    if(results.isEmpty()) {
+                        displayResults = "Could not find anything in the world with by that term!";
+                        break;
+                    }
+                    for (Person person : results) {
+                        displayResults += String.format("%s\n", person);
+                    }
                     break;
                 }
                 displayResults = b.toString();
@@ -267,6 +287,13 @@ public class MainInterface extends JFrame {
         }
 
         displaySearchResults(displayResults);
+    }
+    private void handleDisplayWorld() {
+        String rtr = "";
+        if(fileName == null || fileName.isEmpty()) rtr = "Please select a world file!";
+        else rtr = String.format("%s", world);
+
+        textArea.setText(rtr);
     }
 
     private void displaySearchResults(String toDisplay) {

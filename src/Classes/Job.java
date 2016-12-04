@@ -12,6 +12,7 @@ public class Job extends BaseObject implements Runnable {
     private ArrayList<String> skills;
 
     private double progress = 0;
+    private boolean runFlag = true;
 
     public Job() { super(); }
     public Job(String n) { super(n); }
@@ -46,13 +47,14 @@ public class Job extends BaseObject implements Runnable {
     public void run() {
         double time = 0;
         while(duration > time) {
-            progress = ((time/duration) * 100);
-            updateStatus();
             try {
                 Thread.sleep(500);
+                if(!runFlag) { continue; }
                 time += 0.5;
+                progress = ((time/duration) * 100);
+                updateStatus();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                return;
             }
         }
     }
@@ -61,6 +63,9 @@ public class Job extends BaseObject implements Runnable {
     public String getSkills() { return String.join(", ", skills); }
     public double getProgress() {
         return progress;
+    }
+    public void toggleFlag() {
+        runFlag = !runFlag;
     }
 
     private void updateStatus() {
