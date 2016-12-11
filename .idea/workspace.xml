@@ -4,48 +4,7 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="Threads running concurrently on all docks, working on displaying them inside a table as they run">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/MatrixCopy.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BaseObjectConformable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CargoShip.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/README.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/BaseObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/BaseObjectConformable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/JobsTableModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/MainInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/ProgressCellRenderer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/Time.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Base/UpdatableTableModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Dock.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Job.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Person.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Port.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/CargoShip.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/PassengerShip.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/Ships/Ship.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Classes/World.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Base/BaseObjectConformable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Classes/Ships/CargoShip.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Base/BaseObject.java" afterPath="$PROJECT_DIR$/src/BaseObject.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Base/MainInterface.java" afterPath="$PROJECT_DIR$/src/MainInterface.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Base/ProgressCellRenderer.java" afterPath="$PROJECT_DIR$/src/ProgressCellRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Base/Time.java" afterPath="$PROJECT_DIR$/src/Time.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Base/UpdatableTableModel.java" afterPath="$PROJECT_DIR$/src/UpdatableTableModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Classes/Dock.java" afterPath="$PROJECT_DIR$/src/Dock.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Classes/Job.java" afterPath="$PROJECT_DIR$/src/Job.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Classes/Person.java" afterPath="$PROJECT_DIR$/src/Person.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Classes/Port.java" afterPath="$PROJECT_DIR$/src/Port.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Classes/Ships/PassengerShip.java" afterPath="$PROJECT_DIR$/src/PassengerShip.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Classes/Ships/Ship.java" afterPath="$PROJECT_DIR$/src/Ship.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Classes/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="Threads running concurrently on all docks, working on displaying them inside a table as they run" />
     <ignored path="SeaPorts_Phillips.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
