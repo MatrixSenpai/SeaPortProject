@@ -18,6 +18,9 @@ public class Person extends BaseObject implements BaseObjectConformable {
     /** This person's skill */
     private String skill;
 
+    /** Whether this person is available in the pool */
+    public boolean isAvailableInPool = true;
+
     /** Default Constructor */
     public Person() { super(); }
 
@@ -61,6 +64,18 @@ public class Person extends BaseObject implements BaseObjectConformable {
     public DefaultMutableTreeNode getTree(Integer i) {
         DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(String.format("(%d) %s", i, name));
         rootNode.add(new DefaultMutableTreeNode(String.format("Skill: %s", skill)));
+
+        return rootNode;
+    }
+    public DefaultMutableTreeNode reportToPool() {
+        DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(name);
+        rootNode.add(new DefaultMutableTreeNode(String.format("Skill: %s", skill)));
+
+        String available = "";
+        if(isAvailableInPool) available = "Available for tasking";
+        else available = "Tasked to ship";
+
+        rootNode.add(new DefaultMutableTreeNode(available));
 
         return rootNode;
     }

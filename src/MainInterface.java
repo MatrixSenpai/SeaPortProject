@@ -251,7 +251,9 @@ public class MainInterface extends JFrame {
     /** Require the tree to refresh */
     public void updateTreeAfterNewShip() {
         JTree updatedTree = world.getTree();
-        handleTreeUpdate(updatedTree);
+        handleTreeUpdate(updatedTree, true);
+        updatedTree = world.reportPortPool();
+        handleTreeUpdate(updatedTree, false);
     }
 
     // File Actions
@@ -269,11 +271,11 @@ public class MainInterface extends JFrame {
             fileName = selectedFile.getAbsolutePath();
             world.processFile(selectedFile);
         }
-        else if(result == JFileChooser.CANCEL_OPTION) { System.out.println("File selection was canceled"); }
+        else if(result == JFileChooser.CANCEL_OPTION) { System.out.println("File selection was canceled"); return; }
         else { throw new IOException("File selection was invalid"); }
 
         JTree newTree = world.getTree();
-        handleTreeUpdate(newTree);
+        handleTreeUpdate(newTree, true);
         worldTree.addTreeSelectionListener(new TreeSelectionListener() {
             @Override
             public void valueChanged(TreeSelectionEvent e) {
@@ -282,6 +284,9 @@ public class MainInterface extends JFrame {
                 handleTreeSelection(index);
             }
         });
+
+        newTree = world.reportPortPool();
+        handleTreeUpdate(newTree, false);
 
         textArea.setText(String.format("%s", world));
         world.startJobs();
@@ -293,9 +298,14 @@ public class MainInterface extends JFrame {
      * Update the displayed tree if there are any changes
      * @param t The tree to update
      */
-    private void handleTreeUpdate(JTree t) {
-        worldTree.setModel(t.getModel());
-        worldTree.treeDidChange();
+    private void handleTreeUpdate(JTree t, boolean isWorld) {
+        if(isWorld) {
+            worldTree.setModel(t.getModel());
+            worldTree.treeDidChange();
+        } else {
+            poolTree.setModel(t.getModel());
+            poolTree.treeDidChange();
+        }
     }
 
     /**
@@ -411,7 +421,7 @@ public class MainInterface extends JFrame {
         pane.setPreferredSize(new Dimension((int) (this.getWidth() * 0.3), this.getHeight()));
 
         pane = (JScrollPane) poolTree.getParent().getParent();
-        pane.setPreferredSize(new Dimension((int) (this.getWidth() * 0.3), this.getHeight()));
+        pane.setPreferredSize(new Dimension((int) (this.getWidth() * 0.15), this.getHeight()));
 
         pane = (JScrollPane) jobsTable.getParent().getParent();
         pane.setPreferredSize(new Dimension(this.getWidth(), (int) (this.getHeight() * 0.15)));

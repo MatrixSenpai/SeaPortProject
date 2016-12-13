@@ -65,6 +65,15 @@ public class World extends BaseObject {
 
         return new JTree(rootNode);
     }
+    public JTree reportPortPool() {
+        DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode("Port Personnel Pool");
+
+        for(Port p: ports.values()) {
+            rootNode.add(p.reportPool());
+        }
+
+        return new JTree(rootNode);
+    }
 
     // Process methods
     public void processFile(File f) {

@@ -89,6 +89,14 @@ public class Port extends BaseObject {
 
         return rootNode;
     }
+    public DefaultMutableTreeNode reportPool() {
+        DefaultMutableTreeNode baseNode = new DefaultMutableTreeNode(name);
+        for(Person p: persons.values()) {
+            baseNode.add(p.reportToPool());
+        }
+
+        return baseNode;
+    }
 
     // Jobs Methods
     public void startJobs() {
@@ -167,6 +175,21 @@ public class Port extends BaseObject {
         Ship s = queue.entrySet().iterator().next().getValue();
         queue.remove(s);
         return s;
+    }
+
+    public Person dockWantsPersonWithSkill(String skill) {
+        Person p = dockWantsPersonWithSkill(skill);
+        if(p == null) {
+            // TODO
+            // Release ship - no person with skill available in this port
+        }
+
+        return p;
+    }
+
+    private Person hasPersonWithSkill(String skill) {
+        for(Person p: persons.values()) if (p.hasSkill(skill)) return p;
+        return null;
     }
 
     @Override
