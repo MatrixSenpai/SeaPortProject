@@ -4,7 +4,29 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="Threads running concurrently on all docks, working on displaying them inside a table as they run" />
+    <list default="true" id="aa1f9530-4da9-4894-875b-7f791f205c14" name="Default" comment="Threads running concurrently on all docks, working on displaying them inside a table as they run">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TODO.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/BaseObject.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/BaseObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/CargoShip.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/CargoShip.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Dock.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Dock.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Job.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Job.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/MainInterface$1.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/MainInterface$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/MainInterface$2.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/MainInterface$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/MainInterface$3.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/MainInterface$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/MainInterface.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/MainInterface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/PassengerShip.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/PassengerShip.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Person.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Person.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Port.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Port.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/ProgressCellRenderer.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/ProgressCellRenderer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Ship.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Ship.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Time.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/Time.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/UpdatableTableModel.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/UpdatableTableModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/World.class" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/World.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/README.md" afterPath="$PROJECT_DIR$/out/production/SeaPorts_Phillips/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainInterface.java" afterPath="$PROJECT_DIR$/src/MainInterface.java" />
+    </list>
     <ignored path="SeaPorts_Phillips.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,48 +46,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Port.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Port.java">
+      <file leaf-file-name="MainInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="413" column="94" lean-forward="false" selection-start-line="413" selection-start-column="94" selection-end-line="413" selection-end-column="94" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Port#1;class#Port#0" expanded="false" />
-                <element signature="method#toString#0;class#Port#0" expanded="false" />
-                <element signature="method#getTree#0;class#Port#0" expanded="false" />
-                <element signature="method#startJobs#0;class#Port#0" expanded="false" />
-                <element signature="method#toggleJobs#0;class#Port#0" expanded="false" />
-                <element signature="method#stopJobs#0;class#Port#0" expanded="false" />
-                <element signature="method#findDock#0;class#Port#0" expanded="false" />
-                <element signature="method#findShip#0;class#Port#0" expanded="false" />
-                <element signature="method#findJob#0;class#Port#0" expanded="false" />
-                <element signature="method#findPerson#0;class#Port#0" expanded="false" />
-                <element signature="method#findPersonWithSkill#0;class#Port#0" expanded="false" />
-                <element signature="method#matchesAnyComponent#0;class#Port#0" expanded="false" />
+                <element signature="docComment;field#world#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#MainInterface#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#initGUI#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#initJobDisplay#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#addNewJob#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#updateJob#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#removeJob#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#updateTreeAfterNewShip#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#loadFile#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#handleTreeUpdate#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#handleTreeUpdate#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#handleSearch#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#handleDisplayWorld#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#displaySearchResults#0;class#MainInterface#0" expanded="false" />
+                <element signature="docComment;method#main#0;class#MainInterface#0" expanded="false" />
+                <element signature="method#main#0;class#MainInterface#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="300">
-                <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BaseObject.java">
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="94">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -93,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/BaseMain/BaseObject.java" />
         <option value="$PROJECT_DIR$/src/BaseMain/MainInterface.java" />
         <option value="C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/misc/Unsafe.class" />
         <option value="$PROJECT_DIR$/src/Classes/Ships/CargoShip.java" />
@@ -139,11 +157,12 @@
         <option value="$PROJECT_DIR$/src/CargoShip.java" />
         <option value="$PROJECT_DIR$/src/Dock.java" />
         <option value="$PROJECT_DIR$/src/Job.java" />
-        <option value="$PROJECT_DIR$/src/MainInterface.java" />
         <option value="$PROJECT_DIR$/src/PassengerShip.java" />
         <option value="$PROJECT_DIR$/src/Person.java" />
         <option value="$PROJECT_DIR$/src/Port.java" />
         <option value="$PROJECT_DIR$/src/README.md" />
+        <option value="$PROJECT_DIR$/src/TODO.md" />
+        <option value="$PROJECT_DIR$/src/MainInterface.java" />
       </list>
     </option>
   </component>
@@ -237,6 +256,7 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Production">
           <PATH>
@@ -281,11 +301,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="true" />
@@ -305,6 +324,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1056" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -317,6 +339,61 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -461,6 +538,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
     <configuration default="false" name="Main" type="Application" factoryName="Application" singleton="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="MainInterface" />
@@ -517,26 +607,32 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281704" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31364956" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31364956" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947916" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.240625" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41723135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41723135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281704" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -590,7 +686,7 @@
           </selected-grouping-rules>
         </breakpoints-dialog>
       </breakpoints-dialog>
-      <option name="time" value="64" />
+      <option name="time" value="67" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -599,50 +695,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="160" column="46" lean-forward="false" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#World#0;class#World#0" expanded="false" />
-            <element signature="method#toString#0;class#World#0" expanded="false" />
-            <element signature="method#getTree#0;class#World#0" expanded="false" />
-            <element signature="method#processFile#0;class#World#0" expanded="false" />
-            <element signature="method#toggleJobs#0;class#World#0" expanded="false" />
-            <element signature="method#stopJobs#0;class#World#0" expanded="false" />
-            <element signature="method#addPort#0;class#World#0" expanded="false" />
-            <element signature="method#addDock#0;class#World#0" expanded="false" />
-            <element signature="method#addPassShip#0;class#World#0" expanded="false" />
-            <element signature="method#addCargoShip#0;class#World#0" expanded="false" />
-            <element signature="method#addPerson#0;class#World#0" expanded="false" />
-            <element signature="method#addJob#0;class#World#0" expanded="false" />
-            <element signature="method#findObject#0;class#World#0" expanded="false" />
-            <element signature="method#findObject#1;class#World#0" expanded="false" />
-            <element signature="method#findObject#2;class#World#0" expanded="false" />
-            <element signature="method#findSkill#0;class#World#0" expanded="false" />
-            <element signature="method#findPort#0;class#World#0" expanded="false" />
-            <element signature="method#findPort#1;class#World#0" expanded="false" />
-            <element signature="method#findDock#0;class#World#0" expanded="false" />
-            <element signature="method#findShip#0;class#World#0" expanded="false" />
-            <element signature="method#findPerson#0;class#World#0" expanded="false" />
-            <element signature="method#findJob#0;class#World#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Port.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#6620#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#724#725#0" expanded="false" />
             <element signature="method#Port#1;class#Port#0" expanded="false" />
             <element signature="method#toString#0;class#Port#0" expanded="false" />
             <element signature="method#getTree#0;class#Port#0" expanded="false" />
             <element signature="method#startJobs#0;class#Port#0" expanded="false" />
             <element signature="method#toggleJobs#0;class#Port#0" expanded="false" />
             <element signature="method#stopJobs#0;class#Port#0" expanded="false" />
+            <element signature="e#3666#3667#0" expanded="false" />
+            <element signature="e#3697#3698#0" expanded="false" />
             <element signature="method#findDock#0;class#Port#0" expanded="false" />
             <element signature="method#findShip#0;class#Port#0" expanded="false" />
             <element signature="method#findJob#0;class#Port#0" expanded="false" />
@@ -660,6 +728,7 @@
           <folding>
             <element signature="method#toString#0;class#Dock#0" expanded="false" />
             <element signature="method#getTree#0;class#Dock#0" expanded="false" />
+            <element signature="method#shipDidFinish#0;class#Dock#0" expanded="false" />
             <element signature="method#setDockedShip#0;class#Dock#0" expanded="false" />
             <element signature="method#matchesAnyComponent#0;class#Dock#0" expanded="false" />
           </folding>
@@ -671,7 +740,7 @@
         <state relative-caret-position="697">
           <caret line="64" column="60" lean-forward="false" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#Ship#2;class#Ship#0" expanded="false" />
             <element signature="method#toString#0;class#Ship#0" expanded="false" />
             <element signature="method#getTree#0;class#Ship#0" expanded="false" />
@@ -689,7 +758,7 @@
         <state relative-caret-position="459">
           <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#Job#2;class#Job#0" expanded="false" />
             <element signature="method#getTree#0;class#Job#0" expanded="false" />
             <element signature="method#toString#0;class#Job#0" expanded="false" />
@@ -713,20 +782,29 @@
         <state relative-caret-position="153">
           <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;field#world#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#MainInterface#0;class#MainInterface#0" expanded="false" />
             <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initGUI#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#initGUI#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initTree#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initJobDisplay#0;class#MainInterface#0" expanded="false" />
             <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#addNewJob#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#updateJob#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#removeJob#0;class#MainInterface#0" expanded="false" />
             <element signature="method#updateTreeAfterNewShip#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#loadFile#0;class#MainInterface#0" expanded="false" />
             <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#handleTreeUpdate#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleTreeUpdate#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleSearch#0;class#MainInterface#0" expanded="false" />
             <element signature="method#handleDisplayWorld#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#displaySearchResults#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#main#0;class#MainInterface#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,7 +887,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#Ship#2;class#Ship#0" expanded="false" />
             <element signature="method#toString#0;class#Ship#0" expanded="false" />
             <element signature="method#getTree#0;class#Ship#0" expanded="false" />
@@ -835,7 +913,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#World#0;class#World#0" expanded="false" />
             <element signature="method#toString#0;class#World#0" expanded="false" />
             <element signature="method#getTree#0;class#World#0" expanded="false" />
@@ -867,7 +945,7 @@
         <state relative-caret-position="60">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -879,23 +957,13 @@
         <state relative-caret-position="150">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="e#0#2241#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#2241#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LICENSE.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LICENSE.md" />
     <entry file="file://$PROJECT_DIR$/src/Dock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
@@ -915,7 +983,7 @@
         <state relative-caret-position="492">
           <caret line="165" column="29" lean-forward="false" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#Job#2;class#Job#0" expanded="false" />
             <element signature="method#getTree#0;class#Job#0" expanded="false" />
             <element signature="method#toString#0;class#Job#0" expanded="false" />
@@ -931,7 +999,7 @@
         <state relative-caret-position="42">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#0#1401#0" expanded="true" />
+            <element signature="e#0#1401#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -952,49 +1020,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initGUI#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initTree#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initJobDisplay#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#updateTreeAfterNewShip#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#handleTreeUpdate#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#handleSearch#0;class#MainInterface#0" expanded="false" />
-            <element signature="method#handleDisplayWorld#0;class#MainInterface#0" expanded="false" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Port.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="22" column="78" lean-forward="false" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#6620#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#724#725#0" expanded="false" />
             <element signature="method#Port#1;class#Port#0" expanded="false" />
             <element signature="method#toString#0;class#Port#0" expanded="false" />
             <element signature="method#getTree#0;class#Port#0" expanded="false" />
             <element signature="method#startJobs#0;class#Port#0" expanded="false" />
             <element signature="method#toggleJobs#0;class#Port#0" expanded="false" />
             <element signature="method#stopJobs#0;class#Port#0" expanded="false" />
+            <element signature="e#3666#3667#0" expanded="false" />
+            <element signature="e#3697#3698#0" expanded="false" />
             <element signature="method#findDock#0;class#Port#0" expanded="false" />
             <element signature="method#findShip#0;class#Port#0" expanded="false" />
             <element signature="method#findJob#0;class#Port#0" expanded="false" />
@@ -1013,20 +1069,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/README.md">
+    <entry file="file://$PROJECT_DIR$/src/TODO.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="300">
-            <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="413" column="94" lean-forward="false" selection-start-line="413" selection-start-column="94" selection-end-line="413" selection-end-column="94" />
+          <folding>
+            <element signature="docComment;field#world#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#MainInterface#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#MainInterface#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#initGUI#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#initMenuBar#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#initJobDisplay#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#initUIElements#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#addNewJob#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#updateJob#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#removeJob#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#updateTreeAfterNewShip#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#loadFile#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#loadFile#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#handleTreeUpdate#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#handleTreeUpdate#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#handleTreeSelection#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#handleDisplayFile#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#handleSearch#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#handleDisplayWorld#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#displaySearchResults#0;class#MainInterface#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#MainInterface#0" expanded="false" />
+            <element signature="method#main#0;class#MainInterface#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="Copyright.UI">
         <settings>
           <last-edited>MatrixCopy</last-edited>
@@ -1039,9 +1147,67 @@
           </splitter-proportions>
         </settings>
       </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SeaPorts_Phillips</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

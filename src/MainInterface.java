@@ -31,6 +31,8 @@ public class MainInterface extends JFrame {
 
     /** World tree - left pane */
     private JTree worldTree;
+    /** Pool tree - right pane */
+    private JTree poolTree;
     /** Menu bar - top */
     private JMenuBar menuBar;
     /** Main text area - center pane */
@@ -80,10 +82,18 @@ public class MainInterface extends JFrame {
         // Set center x,y to screen center x,y
         setLocationRelativeTo(null);
 
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                handleGUISize();
+            }
+        });
+
         initMenuBar();
         initTree();
         initJobDisplay();
         initUIElements();
+        handleGUISize();
 
         validate();
 
@@ -152,10 +162,15 @@ public class MainInterface extends JFrame {
         worldTree = new JTree(baseNode);
 
         JScrollPane treeScroll = new JScrollPane(worldTree);
-        treeScroll.setPreferredSize(new Dimension((int) (this.getWidth() * 0.3), this.getHeight()));
         worldTree.setRootVisible(false);
         worldTree.setShowsRootHandles(true);
         add(treeScroll, BorderLayout.WEST);
+
+        poolTree = new JTree(baseNode);
+        JScrollPane poolScroll = new JScrollPane(poolTree);
+        poolTree.setRootVisible(true);
+        poolTree.setShowsRootHandles(true);
+        add(poolScroll, BorderLayout.EAST);
     }
     /** Initialize the jobs panel */
     private void initJobDisplay() {
@@ -174,7 +189,6 @@ public class MainInterface extends JFrame {
         });
 
         JScrollPane tableScroll = new JScrollPane(jobsTable);
-        tableScroll.setPreferredSize(new Dimension(this.getWidth(), (int) (this.getHeight() * 0.15)));
         add(tableScroll, BorderLayout.SOUTH);
     }
     /** Initialize misc GUI elements */
@@ -388,6 +402,19 @@ public class MainInterface extends JFrame {
         else rtr = String.format("%s", world);
 
         textArea.setText(rtr);
+    }
+    /** Handle resizing components on window size change */
+    private void handleGUISize() {
+        JScrollPane pane;
+
+        pane = (JScrollPane) worldTree.getParent().getParent();
+        pane.setPreferredSize(new Dimension((int) (this.getWidth() * 0.3), this.getHeight()));
+
+        pane = (JScrollPane) poolTree.getParent().getParent();
+        pane.setPreferredSize(new Dimension((int) (this.getWidth() * 0.3), this.getHeight()));
+
+        pane = (JScrollPane) jobsTable.getParent().getParent();
+        pane.setPreferredSize(new Dimension(this.getWidth(), (int) (this.getHeight() * 0.15)));
     }
 
     /**
