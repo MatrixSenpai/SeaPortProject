@@ -6,6 +6,7 @@
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executors;
@@ -73,7 +74,15 @@ public class Ship extends BaseObject {
             scheduler = Executors.newSingleThreadScheduledExecutor();
             for (Map.Entry<Integer, Job> jobEntry : jobs.entrySet()) {
                 Job j = jobEntry.getValue();
+
+                Dock d = (Dock) baseWorld.findObject(parent);
+                if(!d.getPersonsForJob(j)) {
+                    j.stop();
+                    continue;
+                }
+
                 baseWorld.jobReportedRunning(j);
+
                 scheduler.submit(j);
             }
         }

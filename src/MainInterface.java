@@ -9,6 +9,7 @@ import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreePath;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -232,6 +233,8 @@ public class MainInterface extends JFrame {
      */
     public void addNewJob(Job j) {
         ((UpdatableTableModel) (jobsTable.getModel())).addJob(j);
+        JTree t = world.reportPortPool();
+        handleTreeUpdate(t, false);
     }
     /**
      * Update job status
@@ -247,6 +250,8 @@ public class MainInterface extends JFrame {
      */
     public void removeJob(Job j) {
         ((UpdatableTableModel) (jobsTable.getModel())).removeJob(j);
+        JTree t = world.reportPortPool();
+        handleTreeUpdate(t, false);
     }
     /** Require the tree to refresh */
     public void updateTreeAfterNewShip() {

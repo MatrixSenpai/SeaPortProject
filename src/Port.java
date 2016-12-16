@@ -91,9 +91,16 @@ public class Port extends BaseObject {
     }
     public DefaultMutableTreeNode reportPool() {
         DefaultMutableTreeNode baseNode = new DefaultMutableTreeNode(name);
+        int assigned = 0;
+        int free = 0;
         for(Person p: persons.values()) {
             baseNode.add(p.reportToPool());
+            if(p.isAvailableInPool) free++;
+            else assigned++;
         }
+
+        DefaultMutableTreeNode tasked = new DefaultMutableTreeNode(String.format("%d assigned, %d free", assigned, free));
+        baseNode.add(tasked);
 
         return baseNode;
     }
@@ -178,18 +185,34 @@ public class Port extends BaseObject {
     }
 
     public Person dockWantsPersonWithSkill(String skill) {
-        Person p = dockWantsPersonWithSkill(skill);
+        Person p = findPersonWithSkill(skill);
         if(p == null) {
-            // TODO
-            // Release ship - no person with skill available in this port
+            return null;
         }
 
-        return p;
+        if(p.isAvailableInPool) {
+            p.isAvailableInPool = false;
+            return p;
+        }
+        else return null;
     }
 
-    private Person hasPersonWithSkill(String skill) {
-        for(Person p: persons.values()) if (p.hasSkill(skill)) return p;
-        return null;
+    public void releasePersonsToDock(ArrayList<Person> release) {
+        for(Person p: release) {
+            for(Person inp: persons.values()) {
+                if(p == inp) p.isAvailableInPool = true;
+                return;
+            }
+        }
+    }
+
+    public boolean hasPersonWithSkill(String skill) {
+        for(Person p: persons.values()) {
+            if (p.hasSkill(skill)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

@@ -6,6 +6,7 @@
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
+import java.util.ArrayList;
 
 /**
  * The Dock object is responsible for managing a single ship and communicating about its
@@ -25,6 +26,7 @@ public class Dock extends BaseObject implements BaseObjectConformable {
      * The ID of the ship docked
      */
     private Integer shipID;
+    private ArrayList<Person> inUsePersons = new ArrayList<>();
 
     /**
      * A synchronization object to prevent race conditions
@@ -104,6 +106,40 @@ public class Dock extends BaseObject implements BaseObjectConformable {
         dockedShip.shipShouldEndWorking();
     }
 
+    public boolean getPersonsForJob(Job j) {
+        Port p = (Port) baseWorld.findObject(parent);
+
+        for(String sk: j.getSkillsArray()) {
+            if(sk.toLowerCase() == "none") return true;
+            if(!p.hasPersonWithSkill(sk)) return false;
+        }
+
+        Runnable r = () -> {
+            for(String s: j.getSkillsArray()) {
+                Person pe;
+                while(true) {
+                    pe = p.dockWantsPersonWithSkill(s);
+                    if(pe == null) {
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        continue;
+                    }
+                    inUsePersons.add(pe);
+                    break;
+
+                }
+            }
+        };
+
+
+        Thread t = new Thread(r);
+        t.start();
+        return true;
+    }
+
     /**
      * Delegate function called when the ship completes.
      * Includes the process to pull a new ship from the dock
@@ -111,6 +147,8 @@ public class Dock extends BaseObject implements BaseObjectConformable {
     public void shipDidFinish() {
         dockedShip = null;
         Port p = (Port) baseWorld.findObject(parent);
+        p.releasePersonsToDock(inUsePersons);
+        inUsePersons.clear();
         dockedShip = p.dockWantsNextShip();
 
         baseWorld.shipDidLeaveDock();

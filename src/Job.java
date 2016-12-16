@@ -120,6 +120,14 @@ public class Job extends BaseObject implements Runnable {
     }
 
     /**
+     * Get the skills required in an array
+     * @return Skills list
+     */
+    public ArrayList<String> getSkillsArray() {
+        return skills;
+    }
+
+    /**
      * Get current progress of the job
      * @return Current progress
      */
